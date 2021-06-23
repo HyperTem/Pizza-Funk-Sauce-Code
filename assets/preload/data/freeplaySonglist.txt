@@ -1,2 +1,1 @@
-Spaghetti:peppino:7
-Its-Pizza-Time:peppino:7
+Delivery:peppino:7
