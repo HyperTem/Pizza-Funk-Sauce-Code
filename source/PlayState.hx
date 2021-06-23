@@ -360,10 +360,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
-			case 'its-pizza-time':
-                dialogue = CoolUtil.coolTextFile(Paths.txt('its-pizza-time/dialogue'));
-			case 'spaghetti':
-                dialogue = CoolUtil.coolTextFile(Paths.txt('spaghetti/dialogue'));
+			case 'delivery':
+                dialogue = CoolUtil.coolTextFile(Paths.txt('delivery/dialogue'));
 		}
 
 		//defaults if no stage was found in chart
