@@ -46,10 +46,7 @@ class DialogueBox extends FlxSpriteGroup
 			case 'thorns':
 				FlxG.sound.playMusic(Paths.music('LunchboxScary'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'its-pizza-time':
-				FlxG.sound.playMusic(Paths.music('secret'), 0);
-				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'spaghetti':
+			case 'delivery':
 				FlxG.sound.playMusic(Paths.music('secret'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
@@ -93,16 +90,7 @@ class DialogueBox extends FlxSpriteGroup
 				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
 				face.setGraphicSize(Std.int(face.width * 6));
 				add(face);
-			case 'its-pizza-time':
-				hasDialog = true;
-                box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-                box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-                box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
-                box.width = 200;
-                box.height = 200;
-                box.x = -100;
-                box.y = 375;
-			case 'spaghetti':
+			case 'delivery':
 				hasDialog = true;
                 box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
                 box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
@@ -139,7 +127,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitRight.visible = false;
 		}
 
-		if (PlayState.SONG.song.toLowerCase()=='its-pizza-time')
+		if (PlayState.SONG.song.toLowerCase()=='delivery')
         {
             portraitRight = new FlxSprite(0, 40);
 			portraitRight.frames = Paths.getSparrowAtlas('portraits/bfPortrait');
@@ -151,7 +139,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitRight.visible = false;
 		}
 
-		if (PlayState.SONG.song.toLowerCase()=='its-pizza-time')
+		if (PlayState.SONG.song.toLowerCase()=='delivery')
 		{
 		    portraitLeft = new FlxSprite(-20, 40);
 			portraitLeft.frames = Paths.getSparrowAtlas('portraits/pepPortrait');
