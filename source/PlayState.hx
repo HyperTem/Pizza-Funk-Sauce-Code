@@ -1129,7 +1129,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'thorns':
 					schoolIntro(doof);
-				case 'its-pizza-time':
+				case 'delivery':
                     schoolIntro(doof);
 				case 'spaghetti':
                     schoolIntro(doof);
