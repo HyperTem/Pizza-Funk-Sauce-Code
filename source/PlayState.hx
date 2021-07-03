@@ -362,6 +362,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 			case 'delivery':
                 dialogue = CoolUtil.coolTextFile(Paths.txt('delivery/dialogue'));
+		    case 'bloodsauce':
+                dialogue = CoolUtil.coolTextFile(Paths.txt('bloodsauce/dialogue'));
 		}
 
 		//defaults if no stage was found in chart
@@ -1131,7 +1133,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'delivery':
                     schoolIntro(doof);
-				case 'spaghetti':
+				case 'bloodsauce':
                     schoolIntro(doof);
 				default:
 					startCountdown();
