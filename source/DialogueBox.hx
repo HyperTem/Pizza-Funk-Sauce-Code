@@ -49,6 +49,9 @@ class DialogueBox extends FlxSpriteGroup
 			case 'delivery':
 				FlxG.sound.playMusic(Paths.music('secret'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
+			case 'bloodsauce':
+				FlxG.sound.playMusic(Paths.music('secret'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
@@ -99,6 +102,15 @@ class DialogueBox extends FlxSpriteGroup
                 box.height = 200;
                 box.x = -100;
                 box.y = 375;
+			case 'bloodsauce':
+				hasDialog = true;
+                box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+                box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+                box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+                box.width = 200;
+                box.height = 200;
+                box.x = -100;
+                box.y = 375
 		}
 
 		this.dialogueList = dialogueList;
@@ -151,7 +163,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.visible = false;
 		}
 		
-		if (PlayState.SONG.song.toLowerCase()=='spaghetti')
+		if (PlayState.SONG.song.toLowerCase()=='bloodsauce')
 		{
 		    portraitLeft = new FlxSprite(-20, 40);
 			portraitLeft.frames = Paths.getSparrowAtlas('portraits/pepPortrait');
@@ -163,7 +175,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.visible = false;
 		}
 
-		if (PlayState.SONG.song.toLowerCase()=='spaghetti')
+		if (PlayState.SONG.song.toLowerCase()=='bloodsauce')
         {
             portraitRight = new FlxSprite(0, 40);
 			portraitRight.frames = Paths.getSparrowAtlas('portraits/bfPortrait');
